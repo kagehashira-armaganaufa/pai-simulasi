@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAI Kelas 9 - Bab 1 Lengkap</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:#eefcf7;
+    background:
+      radial-gradient(circle at 10% 10%,#155b4b 0,transparent 28%),
+      radial-gradient(circle at 90% 20%,#16466b 0,transparent 25%),
+      linear-gradient(135deg,#04120f,#071c18 45%,#061421);
+    min-height:100vh;
+}
+
+.container{
+    width:min(950px,94%);
+    margin:auto;
+    padding:20px 0 50px;
+}
+
+.hero{
+    text-align:center;
+    padding:35px 20px;
+    border:1px solid #3d8974;
+    border-radius:28px;
+    background:linear-gradient(145deg,#0d332b,#0b2130);
+    box-shadow:0 15px 45px #0008;
+    margin-bottom:20px;
+}
+
+.hero .book{
+    font-size:55px;
+}
+
+.hero h1{
+    margin:10px 0;
+    font-size:29px;
+}
+
+.hero p{
+    color:#bddbd1;
+    line-height:1.6;
+}
+
+.badge{
+    display:inline-block;
+    margin-top:12px;
+    padding:8px 15px;
+    border-radius:30px;
+    background:#155444;
+    color:#aef5d4;
+    font-size:13px;
+}
+
+.menu{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:5px 0 15px;
+}
+
+.menu button{
+    flex:0 0 auto;
+    border:1px solid #326556;
+    background:#0c2821;
+    color:#dff9ef;
+    padding:11px 14px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.menu button:hover{
+    background:#174b3d;
+}
+
+.section{
+    background:#091b17;
+    border:1px solid #285146;
+    border-radius:18px;
+    margin:13px 0;
+    overflow:hidden;
+}
+
+.section-title{
+    width:100%;
+    border:0;
+    color:white;
+    background:linear-gradient(90deg,#0d2922,#0b201d);
+    padding:18px;
+    font-size:17px;
+    font-weight:bold;
+    text-align:left;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.section-title:hover{
+    background:#12372d;
+}
+
+.content{
+    display:none;
+    padding:5px 19px 22px;
+    line-height:1.75;
+    color:#d7ebe4;
+}
+
+.content.show{
+    display:block;
+}
+
+h2{
+    color:#86edc1;
+    margin-top:20px;
+}
+
+h3{
+    color:#a9f5d2;
+    margin-top:18px;
+}
+
+p{margin:8px 0}
+
+ul,ol{
+    padding-left:25px;
+}
+
+li{
+    margin:5px 0;
+}
+
+.box{
+    padding:15px;
+    border-radius:13px;
+    background:#102d26;
+    border-left:4px solid #52d59e;
+    margin:13px 0;
+}
+
+.warning{
+    background:#2d2715;
+    border-left:4px solid #e7bd58;
+}
+
+.arabic{
+    direction:rtl;
+    text-align:right;
+    font-size:24px;
+    line-height:2.1;
+    padding:18px;
+    border-radius:14px;
+    background:#061613;
+    border:1px solid #294c43;
+    margin:12px 0;
+}
+
+.translation{
+    background:#102923;
+    padding:15px;
+    border-radius:12px;
+    color:#dff8ed;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.card{
+    padding:15px;
+    background:#0d2821;
+    border:1px solid #285146;
+    border-radius:14px;
+}
+
+.card strong{
+    color:#8ceec2;
+}
+
+.tag{
+    display:inline-block;
+    padding:4px 8px;
+    border-radius:7px;
+    background:#16493b;
+    color:#9ceec8;
+    font-size:12px;
+}
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th,td{
+    border:1px solid #31594e;
+    padding:11px;
+    text-align:left;
+}
+
+th{
+    background:#12392e;
+    color:#a8f3ce;
+}
+
+td{
+    background:#0c211c;
+}
+
+.flashcards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.flash{
+    min-height:110px;
+    border:1px solid #2e6253;
+    border-radius:14px;
+    background:#0d2922;
+    padding:15px;
+    cursor:pointer;
+}
+
+.flash .answer{
+    display:none;
+    color:#9ff0c7;
+    margin-top:12px;
+}
+
+.flash.open .answer{
+    display:block;
+}
+
+.quiz{
+    padding:18px;
+    border-radius:16px;
+    background:#061410;
+    border:1px solid #315a4e;
+}
+
+.quiz-head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    color:#9fc9bb;
+    font-size:14px;
+}
+
+.progress{
+    height:8px;
+    background:#19302a;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.progress div{
+    height:100%;
+    width:0;
+    background:#4bd49a;
+    transition:.3s;
+}
+
+.question{
+    font-size:18px;
+    font-weight:bold;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+
+.option{
+    display:block;
+    width:100%;
+    text-align:left;
+    padding:13px;
+    margin:7px 0;
+    border-radius:11px;
+    border:1px solid #31584d;
+    background:#10251f;
+    color:white;
+    cursor:pointer;
+}
+
+.option:hover{
+    background:#173a30;
+}
+
+.option.correct{
+    background:#14583d;
+    border-color:#58e1a4;
+}
+
+.option.wrong{
+    background:#572727;
+    border-color:#e46f6f;
+}
+
+.option:disabled{
+    cursor:default;
+}
+
+.explain{
+    display:none;
+    margin-top:13px;
+    padding:13px;
+    background:#142e27;
+    border-radius:10px;
+}
+
+.next,.restart,.save{
+    border:0;
+    padding:12px 18px;
+    border-radius:11px;
+    background:#45d49a;
+    color:#062016;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:12px;
+}
+
+.result{
+    display:none;
+    text-align:center;
+}
+
+.score{
+    font-size:48px;
+    color:#85efbf;
+    font-weight:bold;
+}
+
+.reflection textarea{
+    width:100%;
+    min-height:90px;
+    resize:vertical;
+    border-radius:11px;
+    border:1px solid #31584d;
+    background:#06130f;
+    color:white;
+    padding:12px;
+    margin:7px 0 14px;
+}
+
+.saved{
+    display:none;
+    margin-top:15px;
+    padding:15px;
+    border-radius:12px;
+    background:#12372c;
+}
+
+.footer{
+    text-align:center;
+    color:#769a90;
+    padding-top:25px;
+    font-size:13px;
+}
+
+@media(max-width:650px){
+    .grid,.flashcards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:23px;
+    }
+
+    .arabic{
+        font-size:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+    <div class="book">📖</div>
+    <h1>PAI & Budi Pekerti Kelas IX</h1>
+    <p>
+        BAB 1 — AL-QUR'AN MENGINSPIRASI:<br>
+        <b>Meraih Kesuksesan dengan Semangat Mencari Ilmu</b>
+    </p>
+    <div class="badge">
+        📚 Materi Lengkap • Waqaf • Dalil • Tokoh • Quiz UTS • Refleksi
+    </div>
+</div>
+
+
+<div class="menu">
+    <button onclick="openAll()">📂 Buka Semua</button>
+    <button onclick="closeAll()">📁 Tutup Semua</button>
+    <button onclick="document.getElementById('quizSection').scrollIntoView()">📝 Mulai Quiz</button>
+</div>
+
+
+<!-- 1 -->
+<div class="section">
+<button class="section-title">
+1️⃣ GAMBARAN UMUM BAB 1 <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Judul Bab</h2>
+
+<div class="box">
+<b>Al-Qur'an Menginspirasi: Meraih Kesuksesan dengan Semangat Mencari Ilmu</b>
+</div>
+
+<p>
+Bab ini mengajarkan bahwa Islam sangat menghargai ilmu pengetahuan.
+Seorang muslim diperintahkan untuk belajar, mencari ilmu, menghormati orang berilmu,
+serta mengamalkan ilmu yang telah diperolehnya.
+</p>
+
+<h3>Tujuan yang perlu dikuasai</h3>
+
+<ul>
+<li>Membaca Q.S. Al-Mujadilah [58]:11.</li>
+<li>Membaca Q.S. Az-Zumar [39]:9.</li>
+<li>Memahami arti dan kandungan kedua ayat.</li>
+<li>Memahami hadis tentang keutamaan mencari ilmu.</li>
+<li>Memahami hukum bacaan waqaf.</li>
+<li>Menjelaskan keutamaan ilmu.</li>
+<li>Memahami karakter orang yang berilmu.</li>
+<li>Memahami Ulul Albab.</li>
+<li>Mengenal cendekiawan/ilmuwan muslim.</li>
+<li>Meneladani semangat mereka dalam mencari ilmu.</li>
+</ul>
+
+<div class="box">
+<b>⭐ Kata kunci:</b><br>
+Al-Mujadilah • Az-Zumar • Ilmu • Tajwid • Waqaf •
+Menuntut ilmu • Ulul Albab • Cendekiawan Muslim
+</div>
+
+</div>
+</div>
+
+
+<!-- 2 -->
+<div class="section">
+<button class="section-title">
+2️⃣ Q.S. AL-MUJADILAH [58]: 11 <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Ayat</h2>
+
+<div class="arabic">
+يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قِيلَ لَكُمْ تَفَسَّحُوا فِي الْمَجَالِسِ فَافْسَحُوا يَفْسَحِ اللَّهُ لَكُمْ ۖ وَإِذَا قِيلَ انشُزُوا فَانشُزُوا يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ۚ وَاللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ
+</div>
+
+<h3>Artinya secara ringkas</h3>
+
+<div class="translation">
+Wahai orang-orang beriman, apabila dikatakan kepadamu,
+“Berilah kelapangan di dalam majelis-majelis,” maka lapangkanlah.
+Allah akan memberi kelapangan untukmu. Dan apabila dikatakan,
+“Berdirilah kamu,” maka berdirilah. Allah akan mengangkat derajat
+orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu
+beberapa derajat. Allah Maha Mengetahui apa yang kamu kerjakan.
+</div>
+
+<h3>📌 Kandungan penting</h3>
+
+<ul>
+<li>Allah memerintahkan orang beriman untuk menjaga adab dalam majelis.</li>
+<li>Kita harus memberikan tempat dan kelapangan kepada orang lain.</li>
+<li>Orang yang beriman dan berilmu mendapat kedudukan yang tinggi.</li>
+<li>Ilmu menjadi salah satu sebab seseorang diangkat derajatnya oleh Allah.</li>
+<li>Ilmu harus disertai keimanan dan perilaku yang baik.</li>
+<li>Allah mengetahui semua yang dilakukan manusia.</li>
+</ul>
+
+<div class="box">
+<b>🔑 Kata kunci ayat:</b><br>
+Beriman → beradab → mencari ilmu → derajat diangkat.
+</div>
+
+</div>
+</div>
+
+
+<!-- 3 -->
+<div class="section">
+<button class="section-title">
+3️⃣ Q.S. AZ-ZUMAR [39]: 9 <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Ayat</h2>
+
+<div class="arabic">
+أَمَّنْ هُوَ قَانِتٌ آنَاءَ اللَّيْلِ سَاجِدًا وَقَائِمًا يَحْذَرُ الْآخِرَةَ وَيَرْجُو رَحْمَةَ رَبِّهِ ۗ قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لَا يَعْلَمُونَ ۗ إِنَّمَا يَتَذَكَّرُ أُولُو الْأَلْبَابِ
+</div>
+
+<h3>Artinya secara ringkas</h3>
+
+<div class="translation">
+Apakah sama orang-orang yang mengetahui dengan orang-orang yang tidak mengetahui?
+Sesungguhnya hanya orang yang berakal sehat yang dapat menerima pelajaran.
+</div>
+
+<h3>📌 Kandungan</h3>
+
+<ul>
+<li>Orang berilmu tidak sama dengan orang yang tidak berilmu.</li>
+<li>Orang berilmu seharusnya menggunakan ilmunya untuk memahami kebenaran.</li>
+<li>Ilmu harus membuat seseorang semakin dekat kepada Allah.</li>
+<li>Orang yang mau mengambil pelajaran disebut memiliki akal yang sehat.</li>
+<li>Seorang muslim harus memiliki semangat belajar.</li>
+</ul>
+
+<div class="box">
+<b>🔑 Inti:</b><br>
+Orang yang mengetahui dan orang yang tidak mengetahui tidaklah sama.
+Karena itu, umat Islam diperintahkan untuk terus belajar.
+</div>
+
+</div>
+</div>
+
+
+<!-- 4 -->
+<div class="section">
+<button class="section-title">
+4️⃣ HADIS TENTANG MENUNTUT ILMU <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Hadis</h2>
+
+<div class="arabic">
+طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ
+</div>
+
+<div class="translation">
+“Menuntut ilmu adalah kewajiban bagi setiap muslim.”
+</div>
+
+<p>
+Bab ini juga memuat hadis tentang keutamaan menempuh jalan untuk mencari ilmu:
+</p>
+
+<div class="box">
+<b>HR. Muslim:</b><br>
+Barang siapa menempuh jalan untuk mencari ilmu,
+Allah akan memudahkan baginya jalan menuju surga.
+</div>
+
+<h3>Keutamaan ilmu dalam buku</h3>
+
+<div class="grid">
+
+<div class="card">
+<strong>1. Diangkat derajatnya</strong>
+<p>Berdasarkan Q.S. Al-Mujadilah [58]:11.</p>
+</div>
+
+<div class="card">
+<strong>2. Takut kepada Allah</strong>
+<p>Orang berilmu semakin menyadari kebesaran Allah.</p>
+</div>
+
+<div class="card">
+<strong>3. Mendapat kebaikan</strong>
+<p>Ilmu dapat menjadi jalan menuju kebaikan dunia dan akhirat.</p>
+</div>
+
+<div class="card">
+<strong>4. Dimudahkan menuju surga</strong>
+<p>Orang yang menempuh jalan mencari ilmu mendapat keutamaan.</p>
+</div>
+
+<div class="card">
+<strong>5. Pahala yang terus mengalir</strong>
+<p>Ilmu yang bermanfaat dan diajarkan kepada orang lain dapat menjadi amal yang terus mengalir.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- 5 -->
+<div class="section">
+<button class="section-title">
+5️⃣ HUKUM BACAAN WAQAF 🛑 <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Pengertian Waqaf</h2>
+
+<p>
+<b>Waqaf</b> adalah berhenti membaca Al-Qur'an pada tempat tertentu
+dengan tujuan melanjutkan bacaan pada bagian berikutnya sesuai aturan.
+</p>
+
+<p>
+Tanda waqaf membantu pembaca mengetahui apakah bacaan sebaiknya
+berhenti, diteruskan, atau boleh memilih salah satunya.
+</p>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>Tanda</th>
+<th>Nama</th>
+<th>Arti</th>
+</tr>
+
+<tr>
+<td>م</td>
+<td>Waqaf Lazim</td>
+<td>Harus berhenti</td>
+</tr>
+
+<tr>
+<td>ط</td>
+<td>Waqaf Mutlak</td>
+<td>Harus berhenti</td>
+</tr>
+
+<tr>
+<td>قلى</td>
+<td>Waqaf Aula</td>
+<td>Lebih baik berhenti</td>
+</tr>
+
+<tr>
+<td>صلى</td>
+<td>Washal Aula</td>
+<td>Lebih baik disambung</td>
+</tr>
+
+<tr>
+<td>ج</td>
+<td>Waqaf Jaiz</td>
+<td>Boleh berhenti atau disambung</td>
+</tr>
+
+<tr>
+<td>س / سكتة</td>
+<td>Saktah</td>
+<td>Berhenti sejenak tanpa mengambil napas</td>
+</tr>
+
+<tr>
+<td>لا</td>
+<td>La Waqfa Fih</td>
+<td>Bukan tempat berhenti</td>
+</tr>
+
+<tr>
+<td>ۛ ... ۛ</td>
+<td>Waqaf Mu'anaqah</td>
+<td>Berhenti pada salah satu tanda</td>
+</tr>
+
+</table>
+</div>
+
+<div class="box warning">
+<b>⚠️ Yang sering tertukar:</b><br><br>
+<b>قلى</b> → lebih baik BERHENTI<br>
+<b>صلى</b> → lebih baik DISAMBUNG<br>
+<b>ج</b> → BOLEH keduanya<br>
+<b>لا</b> → JANGAN berhenti
+</div>
+
+</div>
+</div>
+
+
+<!-- 6 -->
+<div class="section">
+<button class="section-title">
+6️⃣ HUKUM MENCARI ILMU & ADAB BELAJAR <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Semangat Mencari Ilmu</h2>
+
+<p>
+Mencari ilmu merupakan bagian penting dalam kehidupan seorang muslim.
+Ilmu harus dicari dengan niat yang benar dan digunakan untuk kebaikan.
+</p>
+
+<h3>Adab dalam mencari ilmu</h3>
+
+<ul>
+<li>Meluruskan niat karena Allah.</li>
+<li>Menghormati guru.</li>
+<li>Menghormati teman yang sedang belajar.</li>
+<li>Rajin membaca dan belajar.</li>
+<li>Bertanya ketika belum memahami.</li>
+<li>Tidak malu mengakui belum tahu.</li>
+<li>Bersungguh-sungguh dan tidak mudah menyerah.</li>
+<li>Mengamalkan ilmu.</li>
+<li>Mengajarkan ilmu yang bermanfaat kepada orang lain.</li>
+<li>Menghindari kesombongan karena ilmu.</li>
+</ul>
+
+<h3>Karakter orang yang berilmu</h3>
+
+<ul>
+<li>Rendah hati.</li>
+<li>Gemar belajar.</li>
+<li>Berpikir kritis.</li>
+<li>Mau menerima nasihat.</li>
+<li>Menggunakan ilmu untuk kebaikan.</li>
+<li>Takut kepada Allah dan bertanggung jawab.</li>
+</ul>
+
+</div>
+</div>
+
+
+<!-- 7 -->
+<div class="section">
+<button class="section-title">
+7️⃣ ULUL ALBAB <span>＋</span>
+</button>
+
+<div class="content">
+
+<h2>Pengertian</h2>
+
+<p>
+<b>Ulul Albab</b> adalah orang-orang yang memiliki akal yang sehat,
+mampu berpikir, mengambil pelajaran, dan menggunakan pikirannya
+untuk memahami tanda-tanda kebesaran Allah.
+</p>
+
+<h3>Ciri-ciri</h3>
+
+<ul>
+<li>Mau berpikir dan merenungkan sesuatu.</li>
+<li>Mampu mengambil pelajaran.</li>
+<li>Mencari ilmu.</li>
+<li>Menghubungkan ilmu dengan keimanan.</li>
+<li>Menggunakan ilmu untuk kebaikan.</li>
+</ul>
+
+<div class="box">
+<b>🧠 Ingat:</b><br>
+Ulul Albab bukan sekadar orang pintar,
+tetapi orang yang menggunakan akal dan ilmunya untuk memahami
+kebenaran serta melakukan kebaikan.
+</div>
+
+</div>
+</div>
+
+
+<!-- 8 TOKOH -->
+<div class="section">
+<button class="section-title">
+8️⃣ CENDEKIAWAN MUSLIM & ILMU PENGETAHUAN 🔬 <span>＋</span>
+</button>
+
+<div class="content">
+
+<p>
+Buku paket menyebut beberapa cendekiawan muslim yang berkontribusi
+besar terhadap perkembangan ilmu pengetahuan. 1
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🩺 Ibnu Sina</h3>
+<span class="tag">Kedokteran</span>
+<p>
+Ibnu Sina (980–1037) dikenal memiliki kontribusi besar dalam bidang kedokteran.
+</p>
+<p><b>Teladan:</b> tekun belajar dan mengembangkan ilmu untuk kemaslahatan manusia.</p>
+</div>
+
+<div class="card">
+<h3>🔢 Al-Khawarizmi</h3>
+<span class="tag">Matematika • Geografi • Astronomi</span>
+<p>
+Al-Khawarizmi (780–850) memiliki kontribusi besar dalam matematika,
+geografi, dan astronomi.
+</p>
+<p><b>Teladan:</b> berpikir logis, tekun melakukan penelitian, dan mengembangkan ilmu.</p>
+</div>
+
+<div class="card">
+<h3>🫀 Ibnu al-Nafis</h3>
+<span class="tag">Kedokteran</span>
+<p>
+Ibnu al-Nafis (1213–1288) merumuskan dasar-dasar pemahaman tentang
+sirkulasi jantung, paru-paru, dan kapiler.
+</p>
+<p><b>Teladan:</b> teliti, tekun, dan berusaha menemukan pengetahuan baru.</p>
+</div>
+
+</div>
+
+<h3>🧠 Hafalan Tokoh</h3>
+
+<div class="box">
+<b>Ibnu Sina → Kedokteran</b><br>
+<b>Al-Khawarizmi → Matematika, Geografi, Astronomi</b><br>
+<b>Ibnu al-Nafis → Sirkulasi jantung dan paru-paru</b>
+</div>
+
+</div>
+</div>
+
+
+<!-- 9 -->
+<div class="section">
+<button class="section-title">
+9️⃣ DALIL-DALIL PENTING 📜 <span>＋</span>
+</button>
+
+<div class="content">
+
+<div class="card">
+<h3>Q.S. Al-Mujadilah [58]:11</h3>
+<p>
+Allah mengangkat derajat orang-orang beriman dan orang-orang yang diberi ilmu.
+</p>
+</div>
+
+<div class="card">
+<h3>Q.S. Az-Zumar [39]:9</h3>
+<p>
+Orang yang mengetahui tidak sama dengan orang yang tidak mengetahui.
+</p>
+</div>
+
+<div class="card">
+<h3>Q.S. Fatir [35]:28</h3>
+<p>
+Orang yang berilmu memiliki rasa takut kepada Allah karena memahami kebesaran-Nya.
+</p>
+</div>
+
+<div class="card">
+<h3>Q.S. Al-Baqarah [2]:269</h3>
+<p>
+Allah memberikan hikmah kepada siapa yang Dia kehendaki,
+dan orang yang diberi hikmah telah memperoleh kebaikan yang banyak.
+</p>
+</div>
+
+<div class="card">
+<h3>HR. Muslim</h3>
+<p>
+Orang yang menempuh jalan untuk mencari ilmu akan dimudahkan jalannya menuju surga.
+</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- 10 -->
+<div class="section">
+<button class="section-title">
+🔟 CONTOH PENERAPAN DALAM KEHIDUPAN <span>＋</span>
+</button>
+
+<div class="content">
+
+<div class="grid">
+
+<div class="card">
+<strong>📚 Rajin belajar</strong>
+<p>Tidak hanya belajar ketika akan ujian.</p>
+</div>
+
+<div class="card">
+<strong>👨‍🏫 Menghormati guru</strong>
+<p>Mendengarkan ketika guru menjelaskan.</p>
+</div>
+
+<div class="card">
+<strong>❓ Berani bertanya</strong>
+<p>Tidak malu bertanya ketika belum memahami materi.</p>
+</div>
+
+<div class="card">
+<strong>🤝 Berbagi ilmu</strong>
+<p>Membantu teman memahami pelajaran.</p>
+</div>
+
+<div class="card">
+<strong>🧠 Tidak sombong</strong>
+<p>Tidak merasa paling pintar.</p>
+</div>
+
+<div class="card">
+<strong>🎯 Konsisten</strong>
+<p>Tetap belajar meskipun mengalami kesulitan.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- FLASHCARD -->
+<div class="section">
+<button class="section-title">
+🧠 1️⃣1️⃣ FLASHCARD HAFALAN CEPAT <span>＋</span>
+</button>
+
+<div class="content">
+
+<p>Tekan kartu untuk melihat jawabannya.</p>
+
+<div class="flashcards">
+
+<div class="flash">
+<b>Al-Mujadilah 58:11?</b>
+<div class="answer">
+Allah mengangkat derajat orang beriman dan berilmu.
+</div>
+</div>
+
+<div class="flash">
+<b>Az-Zumar 39:9?</b>
+<div class="answer">
+Orang yang mengetahui tidak sama dengan orang yang tidak mengetahui.
+</div>
+</div>
+
+<div class="flash">
+<b>قلى ?</b>
+<div class="answer">
+Lebih baik berhenti.
+</div>
+</div>
+
+<div class="flash">
+<b>صلى ?</b>
+<div class="answer">
+Lebih baik disambung.
+</div>
+</div>
+
+<div class="flash">
+<b>ج ?</b>
+<div class="answer">
+Boleh berhenti atau disambung.
+</div>
+</div>
+
+<div class="flash">
+<b>لا ?</b>
+<div class="answer">
+Bukan tempat berhenti.
+</div>
+</div>
+
+<div class="flash">
+<b>Ibnu Sina?</b>
+<div class="answer">
+Kedokteran.
+</div>
+</div>
+
+<div class="flash">
+<b>Al-Khawarizmi?</b>
+<div class="answer">
+Matematika, geografi, astronomi.
+</div>
+</div>
+
+<div class="flash">
+<b>Ibnu al-Nafis?</b>
+<div class="answer">
+Sirkulasi jantung, paru-paru, dan kapiler.
+</div>
+</div>
+
+<div class="flash">
+<b>Ulul Albab?</b>
+<div class="answer">
+Orang yang menggunakan akal sehat untuk berpikir dan mengambil pelajaran.
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- QUIZ -->
+<div class="section" id="quizSection">
+<button class="section-title">
+📝 1️⃣2️⃣ SIMULASI UTS BAB 1 — LEVEL SULIT <span>＋</span>
+</button>
+
+<div class="content">
+
+<div class="box">
+<b>⚠️ Simulasi, bukan bocoran soal UTS.</b><br>
+Soal dibuat dari materi Bab 1 dan dibuat dengan model kasus,
+pemahaman dalil, waqaf, tokoh, dan penerapan.
+</div>
+
+<div class="quiz">
+
+<div class="quiz-head">
+<span id="qNum">Soal 1 / 20</span>
+<span>⏱️ <span id="time">30</span>s</span>
+</div>
+
+<div class="progress">
+<div id="bar"></div>
+</div>
+
+<div id="question"></div>
+
+<div id="explain" class="explain"></div>
+
+<button class="next" id="next" style="display:none">
+Soal Berikutny
